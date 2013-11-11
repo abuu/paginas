@@ -1,0 +1,19 @@
+﻿<Window x:Class="DemoPaginas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Instalación de Aplicación" Height="380" Width="460
+        " ResizeMode="CanMinimize" Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" MaxHeight="60" />
+            <RowDefinition />
+            <RowDefinition Height="40" MaxHeight="40" />
+        </Grid.RowDefinitions>
+        <Label Content="Asistente de Instalación" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" />
+        <Label Content="El asistente lo ayudará con el proceso de instalación de App1" Height="28" HorizontalAlignment="Left" Margin="8,26,0,0" VerticalAlignment="Top" />
+        <Button Content="Siguiente &gt;" Grid.Row="2" Height="25" HorizontalAlignment="Left" Margin="271,8,0,0" VerticalAlignment="Top" Width="80" Name="btnSiguiente" Click="Siguiente" />
+        <Button Content="&lt; Anterior" Height="25" HorizontalAlignment="Left" Margin="185,8,0,0" VerticalAlignment="Top" Width="80" Grid.Row="2" IsEnabled="False" Name="btnAnterior" Click="Anterior" />
+        <Button Content="Cancelar" Height="25" HorizontalAlignment="Left" Margin="357,8,0,0" VerticalAlignment="Top" Width="80" Grid.Row="2" Click="Cerrar" />
+        <Frame Grid.Row="1" HorizontalAlignment="Stretch" Margin="0" Name="frame" VerticalAlignment="Stretch" />
+    </Grid>
+</Window>

@@ -7,7 +7,7 @@
 
     <Grid>
         <RichTextBox Height="173" HorizontalAlignment="Left" Margin="12,41,0,0" Name="richTextBox1" VerticalAlignment="Top" Width="436" Loaded="richTextBox1_Loaded" />
-        <CheckBox Content="Acepto los Términos de Licencia" Height="16" HorizontalAlignment="Left" Margin="12,222,0,0" Name="checkBox1" VerticalAlignment="Top" />
+        <CheckBox Content="Acepto los Términos de Licencia" Height="16" HorizontalAlignment="Left" Margin="12,222,0,0" Name="checkBox1" VerticalAlignment="Top" Checked="checkBox1_Checked" />
         <Label Content="Lea y acepte los Términos de Licencias (EULA)" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
     </Grid>
 </Page>

@@ -26,13 +26,30 @@ namespace DemoPaginas
 
         private void richTextBox1_Loaded(object sender, RoutedEventArgs e)
         {
-            System.IO.StreamReader sr = new System.IO.StreamReader("D:/isur semestre 5/DemoPaginas-master/Terminos_Licencia.txt");
-            //richTextBox1.Document = sr.ReadToEnd();
-            System.Windows.Documents.FlowDocument doc = new FlowDocument();
-            doc.Blocks.Add(new Paragraph(new Run(sr.ReadToEnd())));
-            //doc.DataContext = sr.ReadToEnd();
-            richTextBox1.Document = doc;
-            sr.Close();
+            try
+            {
+                System.IO.StreamReader sr = new System.IO.StreamReader("D:/isursemestre 5/bernabe/paginas-master/paginas-master/Terminos_Licencia.txt");
+                //richTextBox1.Document = sr.ReadToEnd();
+                System.Windows.Documents.FlowDocument doc = new FlowDocument();
+                doc.Blocks.Add(new Paragraph(new Run(sr.ReadToEnd())));
+                //doc.DataContext = sr.ReadToEnd();
+                richTextBox1.Document = doc;
+                sr.Close();
+            }
+            catch
+            {
+                MessageBox.Show("enlace incorrecto");
+            }
+        }
+
+        private void checkBox1_Checked(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)App.Current.MainWindow).btnSiguiente.IsEnabled = true;
+        }
+
+        private void checkBox1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)App.Current.MainWindow).btnSiguiente.IsEnabled = false;
         }
     }
 }

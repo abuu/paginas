@@ -84,7 +84,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="pagina5.xaml">
+    <Page Include="Pagina5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,8 +102,8 @@
     <Compile Include="Pagina4.xaml.cs">
       <DependentUpon>Pagina4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pagina5.xaml.cs">
-      <DependentUpon>pagina5.xaml</DependentUpon>
+    <Compile Include="Pagina5.xaml.cs">
+      <DependentUpon>Pagina5.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

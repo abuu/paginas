@@ -48,10 +48,10 @@ namespace DemoPaginas
 
         private void irPagina()
         {
-            frame.Navigate(new Uri("/Pagina" + Pagina.ToString() + ".xaml", UriKind.Relative));
+            /*frame.Navigate(new Uri("/Pagina" + Pagina.ToString() + ".xaml", UriKind.Relative));
             btnAnterior.IsEnabled = Pagina > 1 ? true : false;
             btnSiguiente.IsEnabled = Pagina < 4 ? true : false;
-            /*switch (Pagina)
+            switch (Pagina)
             {
                 case 1:
                     btnAnterior.IsEnabled = false;
@@ -66,6 +66,38 @@ namespace DemoPaginas
                     btnSiguiente.IsEnabled = false;
                     break;
             }*/
+            frame.Navigate(new Uri("/Pagina" + Pagina.ToString() + ".xaml", UriKind.Relative));
+            btnAnterior.IsEnabled = Pagina > 1 ? true : false;
+            //btnSiguiente.IsEnabled =  ? true : false;
+            btnSiguiente.IsEnabled = Pagina < 6 ? true : false;
+
+            switch (Pagina)
+            {
+                case 1:
+                    break;
+
+                case 2:
+                    btnSiguiente.IsEnabled = false;
+                    break;
+                case 3:
+                    btnSiguiente.IsEnabled = false;
+                    break;
+
+                case 4:
+                    btnSiguiente.IsEnabled = false;
+                    break;
+
+                case 5:
+                    btnSiguiente.IsEnabled = false;
+                    btnAnterior.IsEnabled = false;
+                    break;
+
+            }
+        }
+
+         void mwin_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }

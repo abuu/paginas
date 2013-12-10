@@ -36,7 +36,19 @@ namespace DemoPaginas
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            progressBar1.Value = progressBar1.Value + 1;
+            if (progressBar1.Value == 100)
+            {
+                dispatcherTimer.Stop();
+                var wnd = (MainWindow)Window.GetWindow(this);
+                wnd.btnSiguiente.IsEnabled = (bool)(progressBar1.Value == 100);
+                
+            }
+            else 
+            {
+                progressBar1.Value = progressBar1.Value + 5;
+            }
+            
+
         }
     }
 }

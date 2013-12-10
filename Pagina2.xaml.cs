@@ -22,34 +22,25 @@ namespace DemoPaginas
         public Pagina2()
         {
             InitializeComponent();
+            //MainWindow win=new MainWindow();
+            //win.mwin.btnSiguiente.Visibility = System.Windows.Visibility.Collapsed;           
         }
 
         private void richTextBox1_Loaded(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                System.IO.StreamReader sr = new System.IO.StreamReader("D:/isursemestre 5/bernabe/paginas-master/paginas-master/Terminos_Licencia.txt");
-                //richTextBox1.Document = sr.ReadToEnd();
-                System.Windows.Documents.FlowDocument doc = new FlowDocument();
-                doc.Blocks.Add(new Paragraph(new Run(sr.ReadToEnd())));
-                //doc.DataContext = sr.ReadToEnd();
-                richTextBox1.Document = doc;
-                sr.Close();
-            }
-            catch
-            {
-                MessageBox.Show("enlace incorrecto");
-            }
+            System.IO.StreamReader sr = new System.IO.StreamReader("D:/isur semestre 5/DemoPaginas-master/Terminos_Licencia.txt");
+            //richTextBox1.Document = sr.ReadToEnd();
+            System.Windows.Documents.FlowDocument doc = new FlowDocument();
+            doc.Blocks.Add(new Paragraph(new Run(sr.ReadToEnd())));
+            //doc.DataContext = sr.ReadToEnd();
+            richTextBox1.Document = doc;
+            sr.Close();
         }
 
         private void checkBox1_Checked(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)App.Current.MainWindow).btnSiguiente.IsEnabled = true;
-        }
-
-        private void checkBox1_Unchecked(object sender, RoutedEventArgs e)
-        {
-            ((MainWindow)App.Current.MainWindow).btnSiguiente.IsEnabled = false;
+            var wnd = (MainWindow)Window.GetWindow(this);
+            wnd.btnSiguiente.IsEnabled = (bool)checkBox1.IsChecked;
         }
     }
 }

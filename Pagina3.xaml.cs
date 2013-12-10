@@ -31,6 +31,13 @@ namespace DemoPaginas
             {
                 textBox1.Text = dialogoRuta.SelectedPath;
             }
+            var wnd = (MainWindow)Window.GetWindow(this);
+            wnd.btnSiguiente.IsEnabled = true;
         }
+
+        private void textBox1_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+        }
+
     }
 }

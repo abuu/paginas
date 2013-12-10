@@ -15,14 +15,24 @@ using System.Windows.Shapes;
 namespace DemoPaginas
 {
     /// <summary>
-    /// Lógica de interacción para pagina5.xaml
+    /// Interaction logic for Pagina5.xaml
     /// </summary>
-    public partial class pagina5 : Page
+    public partial class Pagina5 : Page
     {
-        public pagina5()
+        public Pagina5()
         {
             InitializeComponent();
-            //label1.TextInput = ((Pagina3)App.Current.MainWindow).textBox1.Text;
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var wnd = (MainWindow)Window.GetWindow(this);
+            wnd.btnCancelar.Content = "Finalizar";
         }
     }
 }
